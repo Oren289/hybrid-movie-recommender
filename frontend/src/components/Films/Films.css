@@ -1,0 +1,10 @@
+.movie-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* white-space: nowrap; */
+}
+
+.movie-list {
+  display: inline-block;
+}

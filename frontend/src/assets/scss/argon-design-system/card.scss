@@ -1,0 +1,216 @@
+.card {
+  position: relative;
+
+  &.card-plain {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.profile-page {
+  .card-profile {
+    margin-top: -150px;
+
+    .card-profile-image {
+      position: relative;
+      //min-height: 130px;
+
+      img {
+        max-width: 180px;
+        border-radius: $border-radius;
+        @extend .shadow;
+        transform: translate(-50%, -30%);
+        position: absolute;
+        left: 50%;
+        transition: $transition-base;
+
+        &:hover {
+          transform: translate(-50%, -33%);
+        }
+      }
+    }
+
+    .card-profile-stats {
+      padding: 1rem 0;
+
+      > div {
+        text-align: center;
+        margin-right: 1rem;
+        padding: 0.875rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .heading {
+          font-size: 1.1rem;
+          font-weight: bold;
+          display: block;
+        }
+        .description {
+          font-size: 0.875rem;
+          color: $gray-500;
+        }
+      }
+    }
+
+    .card-profile-actions {
+      padding: 0.875rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+      .card-profile-actions {
+        margin-top: 110px;
+      }
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      .card-profile-stats {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// movie detail card
+.film-detail-page {
+  .card-film {
+    margin-top: -150px;
+
+    .card-film-image {
+      position: relative;
+
+      img {
+        width: 15rem;
+        height: 20rem;
+        // border-radius: $border-radius;
+        @extend .shadow;
+        transform: translate(-50%, -30%);
+        position: absolute;
+        left: 80%;
+        transition: $transition-base;
+
+        &:hover {
+          transform: translate(-50%, -33%);
+        }
+      }
+    }
+
+    .card-film-stats {
+      padding: 1rem 0;
+
+      > div {
+        text-align: center;
+        margin-right: 1rem;
+        padding: 0.875rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .heading {
+          font-size: 1.1rem;
+          font-weight: bold;
+          display: block;
+        }
+        .description {
+          font-size: 0.875rem;
+          color: $gray-500;
+        }
+      }
+    }
+
+    .card-film-actions {
+      padding: 0.875rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+      .card-film-actions {
+        margin-top: 110px;
+      }
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      .card-film-stats {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// Card with blockquotes
+
+.card {
+  .card-blockquote {
+    padding: 2rem;
+    position: relative;
+
+    .svg-bg {
+      display: block;
+      width: 100%;
+      height: 95px;
+      position: absolute;
+      top: -94px;
+      left: 0;
+    }
+  }
+}
+
+// Animated cards
+
+.card-lift--hover {
+  &:hover {
+    transform: translateY(-20px);
+    @include transition($transition-base);
+  }
+}
+
+.card-zoom--hover {
+  &:hover {
+    transform: scale(1.05);
+    @include transition($transition-base);
+  }
+}
+
+.movie-card {
+  height: 20rem;
+}
+
+.movie-card .title-panel {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.8rem 0.8rem 0.5rem 0.8rem;
+}
+
+.card-movie-title {
+  color: whitesmoke !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pagination a {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #6c7ac9;
+  color: #6c7ac9;
+  margin: 0 0.2rem 0 0.2rem;
+}
+
+.pagination__link {
+  font-weight: bold;
+}
+
+.pagination__link--active a {
+  color: #fff !important;
+  background: #6c7ac9;
+}
+
+.pagination__link--disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
+}
